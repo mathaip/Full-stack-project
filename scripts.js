@@ -25,11 +25,25 @@ fetch("https://restcountries-v1.p.rapidapi.com/name/" + searchValue ,{
 
 function displayJSON(data) {
 	 for (var i = 0; i < data.length; i++) {
+	 		var countryName = data[i].name;
+	 		var languages = data[i].languages;
+	 		var capital = data[i].capital;
+	 		var area = data[i].area + "million square kilometres";
+	 		var population = "The population is " + data[i].population;
+	 		var areaCode = data[i].callingCodes;
+	 		var borders = data[i].borders
+	 		var currency = data[i].currencies;
+	 		var region = data[i].region;
+	 		var timeZone = data[i].timezones;
+	 		var alternativeSpelling = data[i].altSpellings;
+
+
 	 		var container = document.getElementById('container');
  	 		var pTag = document.createElement('p');
  	 		var pTag2 = document.createElement('p');
- 	 		pTag.innerHTML = data[i].name;
+ 	 		pTag.innerHTML = "The languages in "+ " " + countryName + " are " + languages + " . " + countryName + " is located in " + region + " . " + \n + countryName ;
  	 		var newTag = container.appendChild(pTag);
+ 	 		var newTag1 = container.appendChild(pTag2);
  	 		
  	 	
 }};
